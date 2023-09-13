@@ -8,7 +8,7 @@ async function main() {
   await Wlmao.waitForDeployment();
 
   console.log(
-   `lmao deployed to: ${Wlmao.target}`
+   `Wlmao deployed to: ${Wlmao.target}`
   );
 }
 
