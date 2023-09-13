@@ -18,10 +18,7 @@ contract Wlmao is ERC20 {
     }
 
     function withdrawLmao(uint _amount) external {
-        require(
-            lmao.balanceOf(msg.sender) >= _amount,
-            "LMAO: Insufficient balance"
-        );
+        require(balanceOf(msg.sender) >= _amount, "LMAO: Insufficient balance");
         _burn(msg.sender, _amount);
         lmao.transfer(msg.sender, _amount);
     }
