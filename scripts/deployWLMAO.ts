@@ -2,12 +2,13 @@ import { ethers } from "hardhat";
 
 async function main() {
 
-  const lmao = await ethers.deployContract("Lmao", []);
+  const lmaoAddr = "0xb0BaA314aD4a6f863f0F6106912ae09b1931d965";
+  const Wlmao = await ethers.deployContract("Wlmao", [lmaoAddr]);
 
-  await lmao.waitForDeployment();
+  await Wlmao.waitForDeployment();
 
   console.log(
-   `lmao deployed to: ${lmao.target}`
+   `lmao deployed to: ${Wlmao.target}`
   );
 }
 
